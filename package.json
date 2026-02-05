@@ -1,0 +1,22 @@
+{
+  "name": "matchpay",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply MATCHPAY_DB --remote",
+    "db:migrate:local": "wrangler d1 migrations apply MATCHPAY_DB --local",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.5.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "wrangler": "^4.62.0",
+    "typescript": "^5.6.3",
+    "@cloudflare/workers-types": "^4.20250725.0"
+  }
+}
